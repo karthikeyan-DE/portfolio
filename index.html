@@ -741,10 +741,11 @@
     /* ─── Education & Certs ──────────────────────────────── */
     .edu-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 48px;
+      align-items: start;
     }
-    .edu-card { padding: 28px; }
+    .edu-card { padding: 28px; height: 100%; }
     .edu-icon {
       font-size: 2rem;
       margin-bottom: 16px;
@@ -765,7 +766,11 @@
       font-size: .75rem;
       color: var(--clr-muted);
     }
-    .cert-card { padding: 24px; }
+    .cert-card { padding: 20px 24px; display: flex; align-items: center; gap: 16px; }
+    .cert-card .cert-badge {
+      flex-shrink: 0;
+    }
+    .cert-card-body { flex: 1; }
     .cert-badge {
       display: inline-flex;
       align-items: center;
@@ -773,7 +778,7 @@
       width: 48px; height: 48px;
       border-radius: var(--radius-sm);
       font-size: 1.4rem;
-      margin-bottom: 16px;
+      margin-bottom: 0;
       background: rgba(91,141,238,.1);
     }
     .cert-name {
@@ -1309,6 +1314,9 @@
         <div class="skill-items">
           <span class="skill-item-tag">Snowflake</span>
           <span class="skill-item-tag">AWS Redshift</span>
+          <span class="skill-item-tag">Azure SQL Database</span>
+          <span class="skill-item-tag">PostgreSQL</span>
+          <span class="skill-item-tag">SQL Server</span>
           <span class="skill-item-tag">DBT</span>
           <span class="skill-item-tag">Apache Airflow</span>
           <span class="skill-item-tag">Databricks</span>
@@ -1324,6 +1332,9 @@
           <span class="skill-item-tag">AWS S3</span>
           <span class="skill-item-tag">AWS Glue</span>
           <span class="skill-item-tag">AWS Lambda</span>
+          <span class="skill-item-tag">Azure Data Factory</span>
+          <span class="skill-item-tag">Azure Synapse</span>
+          <span class="skill-item-tag">Azure Blob Storage</span>
           <span class="skill-item-tag">Git</span>
           <span class="skill-item-tag">Jira</span>
           <span class="skill-item-tag">Talend</span>
@@ -1371,6 +1382,12 @@
       <span class="tech-tag">AWS Glue</span>
       <span class="tech-tag">AWS Lambda</span>
       <span class="tech-tag">Redshift</span>
+      <span class="tech-tag">Azure Data Factory</span>
+      <span class="tech-tag">Azure Synapse</span>
+      <span class="tech-tag">Azure Blob Storage</span>
+      <span class="tech-tag">Azure SQL</span>
+      <span class="tech-tag">SQL Server</span>
+      <span class="tech-tag">PostgreSQL</span>
       <span class="tech-tag">Power BI</span>
       <span class="tech-tag">Talend</span>
       <span class="tech-tag">Git</span>
@@ -1401,10 +1418,10 @@
           <div class="timeline-company">Conoscenza &mdash; Client: AstraZeneca</div>
           <div class="timeline-points">
             <div class="timeline-point">Leading Snowflake and DBT development for EMEA-wide business initiatives at one of the world's top pharmaceutical companies.</div>
-            <div class="timeline-point">Designing scalable ELT pipelines that integrate multiple enterprise data sources into a unified Snowflake environment.</div>
+            <div class="timeline-point">Designing scalable ELT pipelines integrating multiple enterprise data sources including Azure SQL Database and Snowflake.</div>
             <div class="timeline-point">Managing and mentoring a team of data engineers delivering analytics and reporting solutions on global timelines.</div>
             <div class="timeline-point">Driving SQL optimization, Snowflake performance tuning, and warehouse cost optimization — turning efficiency into direct savings.</div>
-            <div class="timeline-point">Implementing comprehensive monitoring, data quality frameworks, and incident management processes.</div>
+            <div class="timeline-point">Implementing comprehensive monitoring, data quality frameworks, and incident management processes across Azure and Snowflake environments.</div>
           </div>
         </div>
       </div>
@@ -1420,7 +1437,8 @@
           <div class="timeline-points">
             <div class="timeline-point">Designed and delivered Snowflake-based data warehouse solutions and enterprise ETL pipelines for a UK financial services firm.</div>
             <div class="timeline-point">Pioneered integration of Snowflake Cortex AI capabilities to power intelligent analytics and predictive insights.</div>
-            <div class="timeline-point">Built and maintained cloud data pipelines spanning Snowflake, AWS, and Airflow for high-availability production environments.</div>
+            <div class="timeline-point">Built and maintained cloud data pipelines spanning Snowflake, AWS, Azure Data Factory, and Airflow for high-availability production environments.</div>
+            <div class="timeline-point">Worked with Azure Blob Storage and Azure SQL for hybrid cloud data ingestion and storage workflows.</div>
             <div class="timeline-point">Led production support, root cause analysis (RCA), and release management processes.</div>
           </div>
         </div>
@@ -1451,10 +1469,10 @@
           </div>
           <div class="timeline-company">Virtusa</div>
           <div class="timeline-points">
-            <div class="timeline-point">Built enterprise ETL solutions using Talend and DBT, forming the foundation of my engineering discipline.</div>
+            <div class="timeline-point">Built enterprise ETL solutions using Talend and DBT across SQL Server, PostgreSQL, and Redshift databases.</div>
             <div class="timeline-point">Led the Redshift-to-Snowflake migration — a high-stakes, zero-tolerance project executed without data loss.</div>
-            <div class="timeline-point">Designed staging, dimensional, and presentation layers for enterprise data warehouses.</div>
-            <div class="timeline-point">Optimized complex SQL workloads, achieving measurable performance improvements across production query runtimes.</div>
+            <div class="timeline-point">Designed staging, dimensional, and presentation layers for enterprise data warehouses using dimensional modeling best practices.</div>
+            <div class="timeline-point">Optimized complex SQL workloads across relational databases, achieving measurable performance improvements across production query runtimes.</div>
             <div class="timeline-point">Maintained Production, UAT, SIT, and Development environments simultaneously. Developed Power BI dashboards for business stakeholders.</div>
           </div>
         </div>
@@ -1583,30 +1601,46 @@
       </div>
       <div>
         <h3 style="font-size:.9rem; font-weight:600; color:var(--clr-muted); text-transform:uppercase; letter-spacing:.08em; margin-bottom:20px;">Certifications</h3>
-        <div style="display:flex; flex-direction:column; gap:16px;">
+        <div style="display:flex; flex-direction:column; gap:12px;">
           <div class="card cert-card reveal">
             <div class="cert-badge">❄️</div>
-            <div class="cert-name">Snowflake Core Pro Certified</div>
-            <div class="cert-issuer">Snowflake Inc.</div>
-            <span class="chip">Verified</span>
+            <div class="cert-card-body">
+              <div class="cert-name">Snowflake Core Pro Certified</div>
+              <div class="cert-issuer">Snowflake Inc.</div>
+              <span class="chip">Verified</span>
+            </div>
           </div>
           <div class="card cert-card reveal">
             <div class="cert-badge">📊</div>
-            <div class="cert-name">Microsoft Power BI Developer Certified</div>
-            <div class="cert-issuer">Microsoft</div>
-            <span class="chip">Verified</span>
+            <div class="cert-card-body">
+              <div class="cert-name">Microsoft Power BI Developer Certified</div>
+              <div class="cert-issuer">Microsoft</div>
+              <span class="chip">Verified</span>
+            </div>
           </div>
           <div class="card cert-card reveal">
             <div class="cert-badge">🔧</div>
-            <div class="cert-name">Talend Data Integration v7 Developer</div>
-            <div class="cert-issuer">Talend / Qlik</div>
-            <span class="chip">Verified</span>
+            <div class="cert-card-body">
+              <div class="cert-name">Talend Data Integration v7 Developer</div>
+              <div class="cert-issuer">Talend / Qlik</div>
+              <span class="chip">Verified</span>
+            </div>
+          </div>
+          <div class="card cert-card reveal">
+            <div class="cert-badge">🔵</div>
+            <div class="cert-card-body">
+              <div class="cert-name">Azure Data Engineer Associate (DP-203)</div>
+              <div class="cert-issuer">Microsoft Azure</div>
+              <span class="chip gold">In Progress</span>
+            </div>
           </div>
           <div class="card cert-card reveal">
             <div class="cert-badge">🚀</div>
-            <div class="cert-name">Databricks Data Engineer</div>
-            <div class="cert-issuer">Databricks</div>
-            <span class="chip gold">In Progress</span>
+            <div class="cert-card-body">
+              <div class="cert-name">Databricks Data Engineer Professional</div>
+              <div class="cert-issuer">Databricks</div>
+              <span class="chip gold">In Progress</span>
+            </div>
           </div>
         </div>
       </div>
