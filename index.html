@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Karthikeyan S — Senior Data Engineer</title>
+  <title>Karthikeyan S | Senior Data Engineer</title>
   <meta name="description" content="Senior Data Engineer specializing in Snowflake, DBT, and cloud data platforms. 4+ years building enterprise data solutions across Banking, Healthcare & Pharma." />
   <meta name="keywords" content="Karthikeyan, Data Engineer, Snowflake, DBT, AWS, ETL, Data Warehouse" />
-  <meta property="og:title" content="Karthikeyan S — Senior Data Engineer" />
+  <meta property="og:title" content="Karthikeyan S | Senior Data Engineer" />
   <meta property="og:description" content="Architecting intelligent data pipelines. Engineering the backbone of business decisions." />
   <meta property="og:type" content="website" />
 
@@ -794,15 +794,16 @@
 
     /* ─── Travel ─────────────────────────────────────────── */
     #travel { background: var(--clr-bg); }
-    .travel-intro {
+    .travel-body {
       display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 80px;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 60px;
       align-items: start;
-      margin-bottom: 80px;
+      margin-bottom: 64px;
     }
+    .travel-left {}
     .travel-philosophy {
-      font-size: 1.05rem;
+      font-size: 1rem;
       color: var(--clr-muted);
       line-height: 1.85;
     }
@@ -811,36 +812,15 @@
       padding-left: 20px;
       font-style: italic;
       font-family: var(--font-display);
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       color: var(--clr-text);
       margin: 24px 0;
       line-height: 1.6;
     }
-    .travel-map-placeholder {
-      aspect-ratio: 16/9;
-      border-radius: var(--radius-lg);
-      background: linear-gradient(135deg, rgba(91,141,238,.08), rgba(167,139,250,.08));
-      border: 1px solid var(--clr-border);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      color: var(--clr-muted);
-      font-size: .9rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .travel-map-bg {
-      font-size: 8rem;
-      opacity: .07;
-      position: absolute;
-    }
-    .travel-map-icon { font-size: 2rem; position: relative; }
     .travel-destinations {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 16px;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
     }
     .destination-card {
       padding: 20px;
@@ -857,20 +837,21 @@
     .destination-name { font-weight: 600; font-size: .875rem; }
     .destination-desc { font-size: .78rem; color: var(--clr-muted); margin-top: 2px; }
 
-    /* Travel gallery */
+    /* Travel gallery   right column of travel-body */
     .travel-gallery {
-      margin-top: 48px;
       display: grid;
-      grid-template-columns: 1.6fr 1fr 1fr;
-      grid-template-rows: 240px 240px;
-      gap: 12px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 200px 200px 200px;
+      gap: 10px;
     }
     .travel-gallery-item {
       overflow: hidden;
       position: relative;
       border-radius: var(--radius-md);
     }
-    .travel-gallery-item:first-child { grid-row: span 2; }
+    .travel-gallery-item:first-child {
+      grid-row: span 2;
+    }
     .travel-gallery-item img {
       width: 100%;
       height: 100%;
@@ -878,27 +859,20 @@
       display: block;
       transition: transform .6s cubic-bezier(.4,0,.2,1);
     }
-    .travel-gallery-item:hover img { transform: scale(1.06); }
+    .travel-gallery-item:hover img { transform: scale(1.07); }
     .travel-gallery-item-label {
       position: absolute;
       bottom: 0; left: 0; right: 0;
-      padding: 20px 16px 12px;
-      background: linear-gradient(transparent, rgba(0,0,0,.6));
+      padding: 18px 14px 10px;
+      background: linear-gradient(transparent, rgba(0,0,0,.62));
       color: #fff;
-      font-size: .78rem;
+      font-size: .75rem;
       font-weight: 600;
       letter-spacing: .04em;
       opacity: 0;
       transition: opacity var(--transition);
     }
     .travel-gallery-item:hover .travel-gallery-item-label { opacity: 1; }
-    @media (max-width: 768px) {
-      .travel-gallery {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 180px 180px 180px;
-      }
-      .travel-gallery-item:first-child { grid-row: span 1; }
-    }
 
     .travel-insight {
       margin-top: 64px;
@@ -1099,8 +1073,9 @@
       .about-portrait { max-width: 360px; }
       .edu-grid { grid-template-columns: 1fr; }
       .contact-grid { grid-template-columns: 1fr; gap: 48px; }
-      .travel-intro { grid-template-columns: 1fr; gap: 40px; }
+      .travel-body { grid-template-columns: 1fr; gap: 40px; }
       .travel-insight { grid-template-columns: 1fr; gap: 32px; }
+      .travel-gallery { grid-template-rows: 160px 160px 160px; }
     }
     @media (max-width: 768px) {
       .section { padding: 80px 0; }
@@ -1294,7 +1269,7 @@
         <p class="section-label">Who I Am</p>
         <h2 class="section-title">From Data Chaos<br>to Crystal Clarity</h2>
         <p class="about-story">
-          I'm a Senior Data Engineer who believes that the best infrastructure is the kind you never notice — it just works, consistently, at scale, without drama. Born from a background in Electronics & Communication Engineering, I found my true calling in the architecture of data: building the invisible machinery that powers enterprise analytics across four continents.
+          I'm a Senior Data Engineer who believes that the best infrastructure is the kind you never notice   it just works, consistently, at scale, without drama. Born from a background in Electronics & Communication Engineering, I found my true calling in the architecture of data: building the invisible machinery that powers enterprise analytics across four continents.
         </p>
         <p class="about-story">
           My journey spans Snowflake architecture, complex ETL/ELT pipelines, cloud-native data platforms, and production environments where downtime is measured in revenue loss. Whether it's leading EMEA initiatives for a global pharma giant or shipping an AI-enhanced warehouse solution for a UK fintech, I bring the same obsession for clean, performant, and maintainable data engineering.
@@ -1346,7 +1321,7 @@
     <div class="section-header reveal">
       <p class="section-label">Technical Arsenal</p>
       <h2 class="section-title">Skills & Expertise</h2>
-      <p class="section-sub">A precision-selected stack built for enterprise-scale data engineering — each tool chosen for performance, maintainability, and business impact.</p>
+      <p class="section-sub">A precision-selected stack built for enterprise-scale data engineering   each tool chosen for performance, maintainability, and business impact.</p>
     </div>
     <div class="skills-grid">
 
@@ -1435,12 +1410,12 @@
             <div class="timeline-role">Senior Data Engineer</div>
             <span class="timeline-period">Dec 2025 – Present</span>
           </div>
-          <div class="timeline-company">Conoscenza &mdash; Client: AstraZeneca</div>
+          <div class="timeline-company">Conoscenza   Client: AstraZeneca</div>
           <div class="timeline-points">
             <div class="timeline-point">Leading Snowflake and DBT development for EMEA-wide business initiatives at one of the world's top pharmaceutical companies.</div>
             <div class="timeline-point">Designing scalable ELT pipelines integrating multiple enterprise data sources including Azure SQL Database and Snowflake.</div>
             <div class="timeline-point">Managing and mentoring a team of data engineers delivering analytics and reporting solutions on global timelines.</div>
-            <div class="timeline-point">Driving SQL optimization, Snowflake performance tuning, and warehouse cost optimization — turning efficiency into direct savings.</div>
+            <div class="timeline-point">Driving SQL optimization, Snowflake performance tuning, and warehouse cost optimization   turning efficiency into direct savings.</div>
             <div class="timeline-point">Implementing comprehensive monitoring, data quality frameworks, and incident management processes across Azure and Snowflake environments.</div>
           </div>
         </div>
@@ -1490,7 +1465,7 @@
           <div class="timeline-company">Virtusa</div>
           <div class="timeline-points">
             <div class="timeline-point">Built enterprise ETL solutions using Talend and DBT across SQL Server, PostgreSQL, and Redshift databases.</div>
-            <div class="timeline-point">Led the Redshift-to-Snowflake migration — a high-stakes, zero-tolerance project executed without data loss.</div>
+            <div class="timeline-point">Led the Redshift-to-Snowflake migration   a high-stakes, zero-tolerance project executed without data loss.</div>
             <div class="timeline-point">Designed staging, dimensional, and presentation layers for enterprise data warehouses using dimensional modeling best practices.</div>
             <div class="timeline-point">Optimized complex SQL workloads across relational databases, achieving measurable performance improvements across production query runtimes.</div>
             <div class="timeline-point">Maintained Production, UAT, SIT, and Development environments simultaneously. Developed Power BI dashboards for business stakeholders.</div>
@@ -1508,7 +1483,7 @@
     <div class="section-header reveal">
       <p class="section-label">Featured Work</p>
       <h2 class="section-title">Projects Portfolio</h2>
-      <p class="section-sub">Enterprise data programs that moved the needle — from migration complexity to AI-enhanced analytics.</p>
+      <p class="section-sub">Enterprise data programs that moved the needle   from migration complexity to AI-enhanced analytics.</p>
     </div>
     <div class="projects-grid">
 
@@ -1582,7 +1557,7 @@
 
       <div class="card project-card reveal">
         <div class="project-num">05 / REPORTING</div>
-        <h3 class="project-title">MAP Lite — Agile Accounting Insights</h3>
+        <h3 class="project-title">MAP Lite   Agile Accounting Insights</h3>
         <p class="project-problem">A lean derivative of the full MAP program, designed for teams needing fast, lightweight financial reporting without the overhead of the full platform.</p>
         <div class="project-pills">
           <span class="project-pill">Snowflake</span>
@@ -1616,7 +1591,7 @@
           <div class="edu-degree">Bachelor of Engineering</div>
           <div class="edu-institution">Electronics & Communication Engineering</div>
           <div class="edu-period">2018 – 2022</div>
-          <p style="margin-top:12px; font-size:.84rem; color:var(--clr-muted); line-height:1.6;">A rigorous engineering foundation that instilled systems thinking, logical problem decomposition, and a love for signals — both electronic and data-driven.</p>
+          <p style="margin-top:12px; font-size:.84rem; color:var(--clr-muted); line-height:1.6;">A rigorous engineering foundation that instilled systems thinking, logical problem decomposition, and a love for signals   both electronic and data-driven.</p>
         </div>
       </div>
       <div>
@@ -1677,79 +1652,72 @@
       <p class="section-sub">The same curiosity that drives me to explore complex data systems takes me across borders, cultures, and landscapes.</p>
     </div>
 
-    <div class="travel-intro reveal">
-      <div>
+    <div class="travel-body reveal">
+      <div class="travel-left">
         <div class="travel-philosophy">
           <blockquote>
             "Every new country is a new dataset. Every culture is a schema you've never queried before."
           </blockquote>
           <p>
-            Travel isn't an escape from work — it's an extension of the same mindset that makes me a better engineer. Navigating unfamiliar airports, bridging language gaps, adapting to new cultures: these aren't just experiences, they're pattern recognition in the wild.
+            Travel isn't an escape from work   it's an extension of the same mindset that makes me a better engineer. Navigating unfamiliar airports, bridging language gaps, adapting to new cultures: these aren't just experiences, they're pattern recognition in the wild.
           </p>
           <br>
           <p>
-            The global nature of my career — building data systems for UK fintechs, EMEA pharma giants, and international banks — is no accident. It's the direct result of a curiosity that never stays still.
+            The global nature of my career   building data systems for UK fintechs, EMEA pharma giants, and international banks   is no accident. It's the direct result of a curiosity that never stays still.
           </p>
         </div>
-      </div>
-      <div class="travel-map-placeholder">
-        <div class="travel-map-bg">🗺️</div>
-        <div class="travel-map-icon">✈️</div>
-        <span>Destinations explored across multiple continents</span>
-      </div>
-    </div>
-
-    <div class="travel-destinations reveal">
-      <div class="destination-card">
-        <div class="destination-flag">🇬🇧</div>
-        <div>
-          <div class="destination-name">United Kingdom</div>
-          <div class="destination-desc">Base of operations — remote working from the heart of tech</div>
+        <div class="travel-destinations" style="margin-top: 32px;">
+          <div class="destination-card">
+            <div class="destination-flag">🇬🇧</div>
+            <div>
+              <div class="destination-name">United Kingdom</div>
+              <div class="destination-desc">Base of operations   heart of tech</div>
+            </div>
+          </div>
+          <div class="destination-card">
+            <div class="destination-flag">🇮🇳</div>
+            <div>
+              <div class="destination-name">India</div>
+              <div class="destination-desc">Roots, heritage, and original curiosity</div>
+            </div>
+          </div>
+          <div class="destination-card">
+            <div class="destination-flag">🌍</div>
+            <div>
+              <div class="destination-name">EMEA Region</div>
+              <div class="destination-desc">Europe, Middle East & Africa</div>
+            </div>
+          </div>
+          <div class="destination-card">
+            <div class="destination-flag">🧭</div>
+            <div>
+              <div class="destination-name">Explorer Mindset</div>
+              <div class="destination-desc">Always planning the next adventure</div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="destination-card">
-        <div class="destination-flag">🇮🇳</div>
-        <div>
-          <div class="destination-name">India</div>
-          <div class="destination-desc">Roots, heritage, and the original spark of curiosity</div>
+      <div class="travel-gallery">
+        <div class="travel-gallery-item">
+          <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=900&q=80&fit=crop" alt="Tropical beach shoreline" loading="lazy" />
+          <div class="travel-gallery-item-label">Sun, Sand & Serenity</div>
         </div>
-      </div>
-      <div class="destination-card">
-        <div class="destination-flag">🌍</div>
-        <div>
-          <div class="destination-name">EMEA Region</div>
-          <div class="destination-desc">Working across Europe, Middle East & Africa</div>
+        <div class="travel-gallery-item">
+          <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80&fit=crop" alt="Mountain landscape at dawn" loading="lazy" />
+          <div class="travel-gallery-item-label">Peaks & Perspective</div>
         </div>
-      </div>
-      <div class="destination-card">
-        <div class="destination-flag">🧭</div>
-        <div>
-          <div class="destination-name">Explorer Mindset</div>
-          <div class="destination-desc">Always planning the next adventure, on-screen or off</div>
+        <div class="travel-gallery-item">
+          <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=600&q=80&fit=crop" alt="City lights at night" loading="lazy" />
+          <div class="travel-gallery-item-label">Cities Never Sleep</div>
         </div>
-      </div>
-    </div>
-
-    <div class="travel-gallery reveal">
-      <div class="travel-gallery-item">
-        <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=900&q=80&fit=crop" alt="Tropical beach shoreline" loading="lazy" />
-        <div class="travel-gallery-item-label">Sun, Sand & Serenity</div>
-      </div>
-      <div class="travel-gallery-item">
-        <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80&fit=crop" alt="Mountain landscape at dawn" loading="lazy" />
-        <div class="travel-gallery-item-label">Peaks & Perspective</div>
-      </div>
-      <div class="travel-gallery-item">
-        <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=600&q=80&fit=crop" alt="City lights at night" loading="lazy" />
-        <div class="travel-gallery-item-label">Cities Never Sleep</div>
-      </div>
-      <div class="travel-gallery-item">
-        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=600&q=80&fit=crop" alt="Ocean horizon at sunset" loading="lazy" />
-        <div class="travel-gallery-item-label">Chasing Horizons</div>
-      </div>
-      <div class="travel-gallery-item">
-        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&q=80&fit=crop" alt="Open road through landscape" loading="lazy" />
-        <div class="travel-gallery-item-label">The Journey Continues</div>
+        <div class="travel-gallery-item">
+          <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=600&q=80&fit=crop" alt="Ocean horizon at sunset" loading="lazy" />
+          <div class="travel-gallery-item-label">Chasing Horizons</div>
+        </div>
+        <div class="travel-gallery-item">
+          <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&q=80&fit=crop" alt="Open road through landscape" loading="lazy" />
+          <div class="travel-gallery-item-label">The Journey Continues</div>
+        </div>
       </div>
     </div>
 
@@ -1757,7 +1725,7 @@
       <div>
         <h3 class="travel-insight-title">How Travel Shapes My Engineering</h3>
         <p class="travel-insight-text">
-          Cross-cultural exposure has made me a better communicator, a more flexible problem-solver, and a sharper systems thinker. When you've navigated data contracts between organizations on four continents, you understand that the hardest problems in engineering are often the human ones — communication, context, and trust.
+          Cross-cultural exposure has made me a better communicator, a more flexible problem-solver, and a sharper systems thinker. When you've navigated data contracts between organizations on four continents, you understand that the hardest problems in engineering are often the human ones   communication, context, and trust.
         </p>
         <br>
         <p class="travel-insight-text">
@@ -1802,7 +1770,7 @@
       <div class="card achievement-card reveal">
         <div class="achievement-icon">🚀</div>
         <div class="achievement-title">Zero-Downtime Migration</div>
-        <div class="achievement-desc">Led a Redshift-to-Snowflake migration with zero data loss and no production downtime — a high-stakes delivery milestone.</div>
+        <div class="achievement-desc">Led a Redshift-to-Snowflake migration with zero data loss and no production downtime   a high-stakes delivery milestone.</div>
       </div>
       <div class="card achievement-card reveal">
         <div class="achievement-icon">🌐</div>
@@ -1822,7 +1790,7 @@
       <div class="card achievement-card reveal">
         <div class="achievement-icon">📈</div>
         <div class="achievement-title">Multi-Domain Impact</div>
-        <div class="achievement-desc">Delivered business-critical data solutions across Banking, Finance, Healthcare, Pharma, and Manufacturing — four industries in four years.</div>
+        <div class="achievement-desc">Delivered business-critical data solutions across Banking, Finance, Healthcare, Pharma, and Manufacturing   four industries in four years.</div>
       </div>
     </div>
   </div>
@@ -1836,7 +1804,7 @@
         <p class="section-label">Get In Touch</p>
         <h2 class="contact-info-title">Let's Build Something Remarkable</h2>
         <p class="contact-info-sub">
-          Whether you're scaling your data infrastructure, planning a cloud migration, or building the analytics platform your business deserves — I'd love to hear about it.
+          Whether you're scaling your data infrastructure, planning a cloud migration, or building the analytics platform your business deserves   I'd love to hear about it.
         </p>
         <div class="contact-items">
           <div class="contact-item">
@@ -1878,7 +1846,7 @@
       <div class="reveal">
         <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
           <input type="hidden" name="access_key" value="f8eec8ad-fe8f-4967-8117-5a09f26cdbc5" />
-          <input type="hidden" name="subject" value="New Portfolio Contact — Karthikeyan S" />
+          <input type="hidden" name="subject" value="New Portfolio Contact   Karthikeyan S" />
           <input type="hidden" name="from_name" value="Portfolio Contact Form" />
           <input type="checkbox" name="botcheck" style="display:none;" />
           <div class="form-row">
@@ -2013,7 +1981,7 @@
         btn.style.background = '#22c55e';
         form.reset();
       } else {
-        btn.textContent = '✗ Failed — try again';
+        btn.textContent = '✗ Failed   try again';
         btn.style.background = '#ef4444';
       }
     } catch {
