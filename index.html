@@ -545,30 +545,22 @@
     }
     .skill-items {
       display: flex;
-      flex-direction: column;
-      gap: 14px;
+      flex-wrap: wrap;
+      gap: 10px;
     }
-    .skill-item {}
-    .skill-item-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 6px;
+    .skill-item-tag {
+      padding: 7px 14px;
+      border-radius: 100px;
+      font-size: .82rem;
+      font-weight: 500;
+      background: var(--clr-surface2);
+      border: 1px solid var(--clr-border);
+      color: var(--clr-text);
+      transition: all var(--transition);
     }
-    .skill-item-name { font-size: .875rem; font-weight: 500; }
-    .skill-item-pct { font-size: .75rem; color: var(--clr-muted); font-family: var(--font-mono); }
-    .skill-bar {
-      height: 5px;
-      background: var(--clr-border);
-      border-radius: 3px;
-      overflow: hidden;
-    }
-    .skill-bar-fill {
-      height: 100%;
-      border-radius: 3px;
-      background: linear-gradient(90deg, var(--clr-accent), var(--clr-accent2));
-      width: 0;
-      transition: width 1.2s cubic-bezier(.4,0,.2,1);
+    .skill-item-tag:hover {
+      border-color: var(--clr-accent);
+      color: var(--clr-accent);
     }
 
     /* Tech tags */
@@ -1137,7 +1129,7 @@
 
 <!-- Loader -->
 <div id="loader">
-  <div class="loader-logo">KS // loading</div>
+  <div class="loader-logo">Karthikeyan // loading</div>
   <div class="loader-bar"><div class="loader-fill"></div></div>
 </div>
 
@@ -1157,7 +1149,7 @@
 <!-- Navigation -->
 <nav id="nav">
   <div class="container nav-inner">
-    <a href="#hero" class="nav-logo">KS<span>.dev</span></a>
+    <a href="#hero" class="nav-logo">Karthikeyan</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -1315,22 +1307,11 @@
           <div class="skill-category-name">Data Platforms</div>
         </div>
         <div class="skill-items">
-          <div class="skill-item">
-            <div class="skill-item-top"><span class="skill-item-name">Snowflake</span><span class="skill-item-pct">95%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="95"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-item-top"><span class="skill-item-name">AWS Redshift</span><span class="skill-item-pct">80%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-item-top"><span class="skill-item-name">DBT</span><span class="skill-item-pct">90%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-item-top"><span class="skill-item-name">Apache Airflow</span><span class="skill-item-pct">85%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
-          </div>
+          <span class="skill-item-tag">Snowflake</span>
+          <span class="skill-item-tag">AWS Redshift</span>
+          <span class="skill-item-tag">DBT</span>
+          <span class="skill-item-tag">Apache Airflow</span>
+          <span class="skill-item-tag">Databricks</span>
         </div>
       </div>
 
@@ -1340,22 +1321,13 @@
           <div class="skill-category-name">Cloud & DevOps</div>
         </div>
         <div class="skill-items">
-          <div class="skill-item">
-            <div class="skill-item-top"><span class="skill-item-name">AWS (S3, Glue, Lambda)</span><span class="skill-item-pct">85%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-item-top"><span class="skill-item-name">Git / Version Control</span><span class="skill-item-pct">90%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-item-top"><span class="skill-item-name">Jira / Agile</span><span class="skill-item-pct">88%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-item-top"><span class="skill-item-name">Talend</span><span class="skill-item-pct">82%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="82"></div></div>
-          </div>
+          <span class="skill-item-tag">AWS S3</span>
+          <span class="skill-item-tag">AWS Glue</span>
+          <span class="skill-item-tag">AWS Lambda</span>
+          <span class="skill-item-tag">Git</span>
+          <span class="skill-item-tag">Jira</span>
+          <span class="skill-item-tag">Talend</span>
+          <span class="skill-item-tag">Agile</span>
         </div>
       </div>
 
@@ -1365,22 +1337,10 @@
           <div class="skill-category-name">Languages & Processing</div>
         </div>
         <div class="skill-items">
-          <div class="skill-item">
-            <div class="skill-item-top"><span class="skill-item-name">Advanced SQL</span><span class="skill-item-pct">95%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="95"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-item-top"><span class="skill-item-name">Python</span><span class="skill-item-pct">82%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="82"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-item-top"><span class="skill-item-name">PySpark</span><span class="skill-item-pct">78%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="78"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-item-top"><span class="skill-item-name">Power BI</span><span class="skill-item-pct">80%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
-          </div>
+          <span class="skill-item-tag">Advanced SQL</span>
+          <span class="skill-item-tag">Python</span>
+          <span class="skill-item-tag">PySpark</span>
+          <span class="skill-item-tag">Power BI</span>
         </div>
       </div>
 
@@ -1390,22 +1350,12 @@
           <div class="skill-category-name">Architecture & Strategy</div>
         </div>
         <div class="skill-items">
-          <div class="skill-item">
-            <div class="skill-item-top"><span class="skill-item-name">Data Modeling</span><span class="skill-item-pct">90%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-item-top"><span class="skill-item-name">ETL/ELT Design</span><span class="skill-item-pct">93%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="93"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-item-top"><span class="skill-item-name">Production Support</span><span class="skill-item-pct">88%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-item-top"><span class="skill-item-name">Snowflake Cortex AI</span><span class="skill-item-pct">75%</span></div>
-            <div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div>
-          </div>
+          <span class="skill-item-tag">Data Modeling</span>
+          <span class="skill-item-tag">ETL / ELT Design</span>
+          <span class="skill-item-tag">Data Warehousing</span>
+          <span class="skill-item-tag">Production Support</span>
+          <span class="skill-item-tag">Snowflake Cortex AI</span>
+          <span class="skill-item-tag">Performance Tuning</span>
         </div>
       </div>
 
@@ -1888,7 +1838,7 @@
 <!-- ─── FOOTER ────────────────────────────────────────────── -->
 <footer>
   <div class="container footer-inner">
-    <div class="footer-logo">KS.dev — Karthikeyan Sivasubiramaniyam</div>
+    <div class="footer-logo">Karthikeyan Sivasubiramaniyam</div>
     <div class="footer-copy">&copy; 2025 All rights reserved. Built with precision.</div>
     <a href="#hero" class="footer-back-top" aria-label="Back to top">↑</a>
   </div>
